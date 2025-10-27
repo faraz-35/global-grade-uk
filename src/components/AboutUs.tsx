@@ -4,7 +4,10 @@ import { Globe } from "lucide-react";
 
 export function AboutUs() {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section
+      id="about"
+      className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden scroll-mt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -55,7 +58,7 @@ export function AboutUs() {
                 thrive in a global environment.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-8">
+            <div className="bg-blue-50 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-800 mb-2">

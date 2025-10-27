@@ -98,7 +98,10 @@ export function ContactUs() {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden scroll-mt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div

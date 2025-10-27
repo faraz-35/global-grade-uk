@@ -125,7 +125,10 @@ export function FAQs() {
   };
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section
+      id="faqs"
+      className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden scroll-mt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -205,7 +208,7 @@ export function FAQs() {
                       >
                         <div className="flex-1 pr-4">
                           <h4 className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-                            <span className="w-6 h-6 bg-gradient-to-r from-blue-800 to-amber-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                            <span className="w-6 h-6 bg-blue-800 text-white rounded-full flex items-center justify-center text-xs font-bold">
                               {index + 1}
                             </span>
                             {item.q}
@@ -264,7 +267,7 @@ export function FAQs() {
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-800 to-amber-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-blue-900 hover:to-amber-700 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+            <button className="bg-blue-800 text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-900 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
               💬 Chat with Counselor
             </button>
             <button className="bg-white border-2 border-blue-800 text-blue-800 font-semibold px-8 py-4 rounded-xl hover:bg-blue-800 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">

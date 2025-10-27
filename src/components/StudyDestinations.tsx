@@ -131,7 +131,10 @@ export function StudyDestinations() {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
+    <section
+      id="destinations"
+      className="relative py-24 bg-gradient-to-br from-white to-gray-50 overflow-hidden scroll-mt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -235,7 +238,7 @@ export function StudyDestinations() {
                       .map((specialty, specIndex) => (
                         <span
                           key={specIndex}
-                          className="px-3 py-1 bg-gradient-to-r from-blue-50 to-amber-50 text-gray-700 rounded-full text-xs font-medium"
+                          className="px-3 py-1 bg-blue-50 text-gray-700 rounded-full text-xs font-medium"
                         >
                           {specialty}
                         </span>
@@ -254,7 +257,7 @@ export function StudyDestinations() {
               key={index}
               className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-amber-50 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <div className="bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text">
                   {stat.icon}
                 </div>

@@ -26,7 +26,7 @@ export function PopularUKPrograms() {
       ranking: "#30 World Ranking",
       students: "35,000+ Students",
       color: "from-amber-600 to-amber-700",
-      bgGradient: "from-amber-50 to-amber-100",
+      bgGradient: "bg-blue-50",
     },
     {
       university: "University College London",
@@ -35,7 +35,7 @@ export function PopularUKPrograms() {
       ranking: "#8 World Ranking",
       students: "45,000+ Students",
       color: "from-blue-800 to-blue-900",
-      bgGradient: "from-blue-50 to-blue-100",
+      bgGradient: "bg-blue-50",
     },
   ];
 
@@ -63,7 +63,10 @@ export function PopularUKPrograms() {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
+    <section
+      id="programs"
+      className="relative py-24 bg-gradient-to-br from-white to-gray-50 overflow-hidden scroll-mt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -101,9 +104,7 @@ export function PopularUKPrograms() {
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden"
             >
               {/* Header */}
-              <div
-                className={`bg-gradient-to-br ${program.bgGradient} p-6 relative`}
-              >
+              <div className={`${program.bgGradient} p-6 relative`}>
                 <div className="flex items-start justify-between mb-4">
                   <div
                     className={`w-12 h-12 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center`}
@@ -165,7 +166,7 @@ export function PopularUKPrograms() {
               key={index}
               className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-amber-50 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <div className="bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text">
                   {stat.icon}
                 </div>

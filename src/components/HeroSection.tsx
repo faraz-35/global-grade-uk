@@ -83,7 +83,7 @@ export function HeroSection() {
             <div className="relative">
               {/* Main Card */}
               <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-700/20 to-amber-600/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-[4/3] bg-blue-900/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/20"></div>
                   <div className="relative z-10 text-center text-white">
                     <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -98,7 +98,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl shadow-xl transform rotate-12"></div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-800 rounded-2xl shadow-xl transform rotate-12"></div>
               <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl shadow-xl transform -rotate-12"></div>
             </div>
           </div>

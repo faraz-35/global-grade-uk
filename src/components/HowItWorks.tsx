@@ -62,7 +62,10 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-indigo-50 to-blue-50 overflow-hidden">
+    <section
+      id="how-it-works"
+      className="relative py-24 bg-gradient-to-br from-indigo-50 to-blue-50 overflow-hidden scroll-mt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
