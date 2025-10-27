@@ -200,8 +200,8 @@ export function ContactUs() {
                   Send Us a Message
                 </h3>
                 <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you within 24
-                  hours.
+                  Fill out the form below and we&apos;ll get back to you within
+                  24 hours.
                 </p>
               </div>
 
@@ -304,7 +304,7 @@ export function ContactUs() {
                     Send Message
                   </Button>
                   <span className="text-sm text-gray-500">
-                    We'll respond within 24 hours
+                    We&apos;ll respond within 24 hours
                   </span>
                 </div>
               </form>
