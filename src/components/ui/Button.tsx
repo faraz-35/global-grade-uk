@@ -3,7 +3,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "small" | "medium" | "large";
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.FormEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
   loading?: boolean;
 }
@@ -22,13 +22,13 @@ export function Button({
 
   const variantClasses = {
     primary:
-      "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+      "bg-gradient-to-r from-blue-800 to-blue-900 hover:from-blue-900 hover:to-blue-950 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
     secondary:
-      "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+      "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
     outline:
-      "bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-lg transform hover:-translate-y-0.5",
+      "bg-transparent border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white hover:shadow-lg transform hover:-translate-y-0.5",
     ghost:
-      "bg-transparent text-blue-600 hover:bg-blue-50 hover:text-blue-700 transform hover:-translate-y-0.5",
+      "bg-transparent text-blue-800 hover:bg-blue-50 hover:text-blue-900 transform hover:-translate-y-0.5",
   };
 
   const sizeClasses = {

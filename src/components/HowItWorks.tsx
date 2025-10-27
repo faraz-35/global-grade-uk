@@ -25,7 +25,7 @@ export function HowItWorks() {
       description:
         "Get a curated list of suitable universities and courses based on your profile and aspirations.",
       icon: <FileText className="w-6 h-6" />,
-      color: "from-emerald-500 to-teal-500",
+      color: "from-amber-600 to-amber-700",
     },
     {
       step: 3,
@@ -33,7 +33,7 @@ export function HowItWorks() {
       description:
         "Professional assistance with application forms, personal statements, and document preparation.",
       icon: <GraduationCap className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500",
+      color: "from-blue-800 to-blue-900",
     },
     {
       step: 4,
@@ -57,7 +57,7 @@ export function HowItWorks() {
       description:
         "Complete assistance with accommodation, city guides, and settling into your new environment.",
       icon: <Plane className="w-6 h-6" />,
-      color: "from-indigo-500 to-purple-500",
+      color: "from-blue-700 to-blue-800",
     },
   ];
 

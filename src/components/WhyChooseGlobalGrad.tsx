@@ -1,4 +1,12 @@
-import { CheckCircle, Star, Zap, Shield, Heart, Target } from "lucide-react";
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Heart,
+  Target,
+  GraduationCap,
+} from "lucide-react";
 
 export function WhyChooseGlobalGrad() {
   const features = [
@@ -15,40 +23,40 @@ export function WhyChooseGlobalGrad() {
       description:
         "Comprehensive assistance from initial application to pre-departure preparations, ensuring a smooth journey.",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-emerald-500 to-teal-500",
-      bgColor: "bg-emerald-50",
+      color: "from-amber-600 to-amber-700",
+      bgColor: "bg-amber-50",
     },
     {
       title: "Transparent & Ethical",
       description:
         "Honest advice with no hidden fees, focusing on achieving real outcomes for your educational success.",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-50",
+      color: "from-blue-800 to-blue-900",
+      bgColor: "bg-blue-50",
     },
     {
       title: "Expert Mentors",
       description:
         "Work with experienced education consultants who understand UK universities and admission processes.",
       icon: <Star className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-50",
+      color: "from-amber-600 to-amber-700",
+      bgColor: "bg-amber-50",
     },
     {
       title: "24/7 Support",
       description:
         "Round-the-clock assistance whenever you need help with applications, visas, or pre-departure queries.",
       icon: <Heart className="w-8 h-8" />,
-      color: "from-rose-500 to-pink-500",
-      bgColor: "bg-rose-50",
+      color: "from-blue-700 to-blue-800",
+      bgColor: "bg-blue-50",
     },
     {
       title: "Proven Success",
       description:
         "Thousands of successful placements in top UK universities with high student satisfaction rates.",
       icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "bg-indigo-50",
+      color: "from-teal-600 to-teal-700",
+      bgColor: "bg-teal-50",
     },
   ];
 
@@ -72,9 +80,9 @@ export function WhyChooseGlobalGrad() {
             Why Choose GlobalGrad
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Your Gateway to
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              UK Education Excellence
+            Why Choose
+            <span className="block bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text text-transparent">
+              GlobalGrad UK?
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -115,7 +123,7 @@ export function WhyChooseGlobalGrad() {
               </p>
 
               {/* Hover Effect */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </div>
           ))}
         </div>
@@ -127,15 +135,15 @@ export function WhyChooseGlobalGrad() {
             <div className="text-sm text-gray-600">Success Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">5000+</div>
+            <div className="text-3xl font-bold text-amber-600 mb-2">5000+</div>
             <div className="text-sm text-gray-600">Students Placed</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-emerald-600 mb-2">150+</div>
+            <div className="text-3xl font-bold text-blue-800 mb-2">150+</div>
             <div className="text-sm text-gray-600">University Partners</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-rose-600 mb-2">24/7</div>
+            <div className="text-3xl font-bold text-blue-700 mb-2">24/7</div>
             <div className="text-sm text-gray-600">Support Available</div>
           </div>
         </div>

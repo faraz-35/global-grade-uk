@@ -25,8 +25,8 @@ export function PopularUKPrograms() {
       location: "Edinburgh, Scotland",
       ranking: "#30 World Ranking",
       students: "35,000+ Students",
-      color: "from-emerald-500 to-teal-500",
-      bgGradient: "from-emerald-50 to-teal-50",
+      color: "from-amber-600 to-amber-700",
+      bgGradient: "from-amber-50 to-amber-100",
     },
     {
       university: "University College London",
@@ -34,8 +34,8 @@ export function PopularUKPrograms() {
       location: "London, England",
       ranking: "#8 World Ranking",
       students: "45,000+ Students",
-      color: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-50 to-pink-50",
+      color: "from-blue-800 to-blue-900",
+      bgGradient: "from-blue-50 to-blue-100",
     },
   ];
 
@@ -83,7 +83,7 @@ export function PopularUKPrograms() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Premier UK
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text text-transparent">
               Universities & Programs
             </span>
           </h2>
@@ -145,7 +145,7 @@ export function PopularUKPrograms() {
                   <ul className="space-y-2">
                     {program.programs.map((prog, progIndex) => (
                       <li key={progIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-gradient-to-r from-blue-800 to-amber-600 rounded-full mr-3"></div>
                         <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300">
                           {prog}
                         </span>
@@ -153,23 +153,6 @@ export function PopularUKPrograms() {
                     ))}
                   </ul>
                 </div>
-
-                <button className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg">
-                  View Details
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
               </div>
             </div>
           ))}
@@ -182,8 +165,8 @@ export function PopularUKPrograms() {
               key={index}
               className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-amber-50 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text">
                   {stat.icon}
                 </div>
               </div>
@@ -202,36 +185,6 @@ export function PopularUKPrograms() {
             <span className="text-sm font-medium text-blue-700">
               Explore more opportunities
             </span>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="primary"
-              size="large"
-              className="shadow-2xl hover:shadow-blue-500/25"
-            >
-              Browse All Programs
-              <GraduationCap className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              variant="outline"
-              size="large"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50"
-            >
-              Get Program Match
-              <svg
-                className="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Button>
           </div>
         </div>
       </div>
