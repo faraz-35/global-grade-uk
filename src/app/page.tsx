@@ -7,6 +7,7 @@ import { PopularUKPrograms } from "@/components/PopularUKPrograms";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FAQs } from "@/components/FAQs";
 import { ContactUs } from "@/components/ContactUs";
+import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
       <section id="contact">
         <ContactUs />
       </section>
+      <Footer />
       <WhatsAppButton />
     </div>
   );

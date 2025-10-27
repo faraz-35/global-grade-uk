@@ -175,7 +175,7 @@ export function ContactUs() {
             ))}
 
             {/* Social Media */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            {/*<div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
               <h3 className="font-bold text-gray-900 mb-4">Follow Us</h3>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
@@ -189,7 +189,7 @@ export function ContactUs() {
                   </a>
                 ))}
               </div>
-            </div>
+            </div>*/}
           </div>
 
           {/* Contact Form */}
@@ -309,39 +309,6 @@ export function ContactUs() {
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-
-        {/* Office Locations */}
-        <div className="bg-gradient-to-br from-blue-800 to-amber-600 rounded-3xl p-10 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Visit Our Offices</h3>
-            <p className="text-blue-100">
-              Meet our counselors in person for personalized guidance
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {officeLocations.map((office, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-3xl">{office.map}</div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">{office.city}</h4>
-                    <p className="text-blue-100 mb-3 whitespace-pre-line">
-                      {office.address}
-                    </p>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Clock className="w-4 h-4" />
-                      <span>{office.hours}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
