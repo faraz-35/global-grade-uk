@@ -71,6 +71,12 @@ export function HeroSection() {
                 variant="outline"
                 size="large"
                 className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                onClick={() => {
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 📞 Book Free Consultation
               </Button>

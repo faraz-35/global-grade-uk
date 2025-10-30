@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "./ui/Button";
 
 export function Footer() {
@@ -28,36 +20,6 @@ export function Footer() {
                 students achieve their dreams of studying abroad with expert
                 guidance and personalized support.
               </p>
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-              </div>
             </div>
 
             {/* Quick Links */}
@@ -113,7 +75,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="#programs"
                     className="text-blue-100 hover:text-white transition-colors"
                   >
                     University Admissions
@@ -121,7 +83,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#contact"
                     className="text-blue-100 hover:text-white transition-colors"
                   >
                     Visa Assistance
@@ -129,7 +91,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#programs"
                     className="text-blue-100 hover:text-white transition-colors"
                   >
                     Scholarship Guidance
@@ -137,7 +99,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#why-choose"
                     className="text-blue-100 hover:text-white transition-colors"
                   >
                     Career Counseling
@@ -145,7 +107,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#how-it-works"
                     className="text-blue-100 hover:text-white transition-colors"
                   >
                     Pre-departure Support
@@ -210,26 +172,6 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-blue-100">
               © {currentYear} GlobalGrad. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              <a
-                href="#"
-                className="text-sm text-blue-100 hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-sm text-blue-100 hover:text-white transition-colors"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="text-sm text-blue-100 hover:text-white transition-colors"
-              >
-                Cookie Policy
-              </a>
             </div>
           </div>
         </div>

@@ -7,10 +7,6 @@ import {
   MapPin,
   Clock,
   Send,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   ChevronRight,
   User,
   Building,
@@ -115,13 +111,6 @@ export function ContactUs() {
       hours: "Mon-Sat: 10:00 AM - 7:00 PM PKT",
       map: "🇵🇰",
     },
-  ];
-
-  const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "#", label: "Facebook" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", label: "Twitter" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
   ];
 
   return (

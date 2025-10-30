@@ -267,10 +267,26 @@ export function FAQs() {
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-800 text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-900 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+            <button
+              onClick={() => {
+                const element = document.querySelector("#contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="bg-blue-800 text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-900 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
+            >
               💬 Chat with Counselor
             </button>
-            <button className="bg-white border-2 border-blue-800 text-blue-800 font-semibold px-8 py-4 rounded-xl hover:bg-blue-800 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+            <button
+              onClick={() => {
+                const element = document.querySelector("#contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="bg-white border-2 border-blue-800 text-blue-800 font-semibold px-8 py-4 rounded-xl hover:bg-blue-800 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+            >
               📧 Email Your Questions
             </button>
           </div>

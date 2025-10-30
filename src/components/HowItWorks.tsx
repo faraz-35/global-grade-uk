@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowRight,
   CheckCircle,
@@ -160,6 +162,12 @@ export function HowItWorks() {
             variant="primary"
             size="large"
             className="shadow-2xl hover:shadow-indigo-500/25"
+            onClick={() => {
+              const element = document.querySelector("#contact");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Start Your Application
             <ArrowRight className="w-5 h-5 ml-2" />
