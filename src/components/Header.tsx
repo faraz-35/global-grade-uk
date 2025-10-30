@@ -8,7 +8,13 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = [
+  const essentialNavItems = [
+    { name: "Programs", href: "#programs" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const allNavItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Why Choose Us", href: "#why-choose" },
@@ -41,7 +47,7 @@ export function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100"
-          : "bg-transparent"
+          : "bg-white/90 backdrop-blur-sm border-b border-gray-100/50"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -51,22 +57,18 @@ export function Header() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-800 to-blue-900 rounded-lg flex items-center justify-center">
               <GraduationCap className="w-5 h-5 text-white" />
             </div>
-            <span className={`font-bold text-xl ${
-              isScrolled ? "text-gray-900" : "text-white"
-            }`}>
+            <span className="font-bold text-xl text-gray-900">
               GlobalGrad UK
             </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center gap-10">
+            {essentialNavItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`font-medium transition-colors duration-200 hover:text-blue-800 ${
-                  isScrolled ? "text-gray-700" : "text-white/90 hover:text-white"
-                }`}
+                className="font-medium text-gray-700 transition-colors duration-200 hover:text-blue-800"
               >
                 {item.name}
               </button>
@@ -74,19 +76,7 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <Button
-              variant="outline"
-              size="small"
-              className={`${
-                isScrolled
-                  ? "border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white"
-                  : "border-white text-white hover:bg-white hover:text-blue-800"
-              }`}
-              onClick={() => scrollToSection("#contact")}
-            >
-              📞 Book Consultation
-            </Button>
+          <div className="hidden md:flex">
             <Button
               variant="primary"
               size="small"
@@ -99,11 +89,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors duration-200 ${
-              isScrolled
-                ? "text-gray-700 hover:bg-gray-100"
-                : "text-white hover:bg-white/10"
-            }`}
+            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-200"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -117,7 +103,7 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 rounded-b-2xl shadow-xl mt-2">
             <div className="py-4 px-4">
-              {navItems.map((item) => (
+              {allNavItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}

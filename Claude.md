@@ -15,6 +15,7 @@
 - **Props Interface**: Define clear TypeScript interfaces for component props
 
 ### Styling Conventions
+- BG should be white(sober design, navy blue primary color),
 - **CSS Modules**: Use CSS Modules for component-scoped styles
 - **Tailwind CSS**: Use Tailwind for utility-first styling
 - **Responsive Design**: Mobile-first approach with responsive breakpoints
