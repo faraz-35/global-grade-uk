@@ -14,34 +14,61 @@ import {
   ChevronRight,
   User,
   Building,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactFormSchema, ContactFormData } from "@/schemas/contact";
+import { submitContactForm } from "@/actions/contact";
+import { z } from "zod";
 
 export function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    program: "",
-    message: "",
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+    setError,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    mode: "onBlur",
   });
 
-  const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setSubmitStatus({ type: null, message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+      const result = await submitContactForm(data);
+
+      if (result.data?.success) {
+        setSubmitStatus({
+          type: "success",
+          message: result.data.message || "Form submitted successfully!",
+        });
+        reset(); // Clear the form
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message:
+            result.data?.error || "Failed to submit form. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "An unexpected error occurred. Please try again.",
+      });
+    }
   };
 
   const contactMethods = [
@@ -205,7 +232,25 @@ export function ContactUs() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Status Messages */}
+              {submitStatus.type && (
+                <div
+                  className={`p-4 rounded-lg mb-6 flex items-center gap-3 ${
+                    submitStatus.type === "success"
+                      ? "bg-green-50 border border-green-200 text-green-800"
+                      : "bg-red-50 border border-red-200 text-red-800"
+                  }`}
+                >
+                  {submitStatus.type === "success" ? (
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  )}
+                  <p className="text-sm font-medium">{submitStatus.message}</p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -213,14 +258,20 @@ export function ContactUs() {
                       Full Name *
                     </label>
                     <input
+                      {...register("name")}
                       type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 ${
+                        errors.name
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300"
+                      }`}
                       placeholder="John Doe"
                     />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.name.message}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -229,14 +280,20 @@ export function ContactUs() {
                       Email Address *
                     </label>
                     <input
+                      {...register("email")}
                       type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 ${
+                        errors.email
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300"
+                      }`}
                       placeholder="john@example.com"
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.email.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -247,14 +304,20 @@ export function ContactUs() {
                       Phone Number *
                     </label>
                     <input
+                      {...register("phone")}
                       type="tel"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 ${
+                        errors.phone
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300"
+                      }`}
                       placeholder="+92 300 1234567"
                     />
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.phone.message}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -262,12 +325,7 @@ export function ContactUs() {
                       <Building className="w-4 h-4 inline mr-2" />
                       Program of Interest
                     </label>
-                    <select
-                      name="program"
-                      value={formData.program}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200"
-                    >
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200">
                       <option value="">Select a program</option>
                       <option value="undergraduate">Undergraduate</option>
                       <option value="postgraduate">Postgraduate</option>
@@ -283,25 +341,40 @@ export function ContactUs() {
                     Message *
                   </label>
                   <textarea
-                    name="message"
-                    required
+                    {...register("message")}
                     rows={5}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 resize-none"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 resize-none ${
+                      errors.message
+                        ? "border-red-300 focus:ring-red-500"
+                        : "border-gray-300"
+                    }`}
                     placeholder="Tell us about your educational goals and how we can help you..."
                   ></textarea>
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-4">
                   <Button
                     variant="primary"
                     size="large"
-                    className="shadow-xl hover:shadow-blue-800/25"
-                    onClick={handleSubmit}
+                    disabled={isSubmitting}
+                    className="shadow-xl hover:shadow-blue-800/25 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                   <span className="text-sm text-gray-500">
                     We&apos;ll respond within 24 hours
