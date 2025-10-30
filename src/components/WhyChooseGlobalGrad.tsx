@@ -15,48 +15,48 @@ export function WhyChooseGlobalGrad() {
       description:
         "Tailored program matching based on your unique academic profile, career goals, and personal preferences.",
       icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-50",
+      color: "text-blue-600",
+      bgColor: "bg-blue-100",
     },
     {
       title: "End-to-End Support",
       description:
         "Comprehensive assistance from initial application to pre-departure preparations, ensuring a smooth journey.",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-amber-600 to-amber-700",
-      bgColor: "bg-amber-50",
+      color: "text-amber-600",
+      bgColor: "bg-amber-100",
     },
     {
       title: "Transparent & Ethical",
       description:
         "Honest advice with no hidden fees, focusing on achieving real outcomes for your educational success.",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-blue-800 to-blue-900",
-      bgColor: "bg-blue-50",
+      color: "text-blue-800",
+      bgColor: "bg-blue-100",
     },
     {
       title: "Expert Mentors",
       description:
         "Work with experienced education consultants who understand UK universities and admission processes.",
       icon: <Star className="w-8 h-8" />,
-      color: "from-amber-600 to-amber-700",
-      bgColor: "bg-amber-50",
+      color: "text-amber-600",
+      bgColor: "bg-amber-100",
     },
     {
       title: "24/7 Support",
       description:
         "Round-the-clock assistance whenever you need help with applications, visas, or pre-departure queries.",
       icon: <Heart className="w-8 h-8" />,
-      color: "from-blue-700 to-blue-800",
-      bgColor: "bg-blue-50",
+      color: "text-blue-700",
+      bgColor: "bg-blue-100",
     },
     {
       title: "Proven Success",
       description:
         "Thousands of successful placements in top UK universities with high student satisfaction rates.",
       icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-teal-600 to-teal-700",
-      bgColor: "bg-teal-50",
+      color: "text-teal-600",
+      bgColor: "bg-teal-100",
     },
   ];
 
@@ -102,19 +102,13 @@ export function WhyChooseGlobalGrad() {
               className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden`}
             >
               {/* Background Gradient */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-              ></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-amber-50 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
 
               {/* Icon */}
               <div
                 className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
-                <div
-                  className={`bg-gradient-to-br ${feature.color} bg-clip-text`}
-                >
-                  {feature.icon}
-                </div>
+                <div className={feature.color}>{feature.icon}</div>
               </div>
 
               {/* Content */}

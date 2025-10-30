@@ -59,14 +59,14 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-              <Button
+              {/*<Button
                 variant="primary"
                 size="large"
                 className="shadow-lg hover:shadow-blue-200"
               >
                 🎯 Apply Now
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              </Button>*/}
               <Button
                 variant="outline"
                 size="large"

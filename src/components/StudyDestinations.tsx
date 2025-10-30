@@ -257,10 +257,8 @@ export function StudyDestinations() {
               key={index}
               className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
             >
-              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <div className="bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text">
-                  {stat.icon}
-                </div>
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <div className="text-blue-600">{stat.icon}</div>
               </div>
               <div className="text-2xl font-bold text-gray-900 mb-1">
                 {stat.value}

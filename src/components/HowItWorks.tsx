@@ -17,7 +17,7 @@ export function HowItWorks() {
       description:
         "Share your academic background, career goals, and preferences for personalized university matching.",
       icon: <Users className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500",
+      color: "text-blue-600",
     },
     {
       step: 2,
@@ -25,7 +25,7 @@ export function HowItWorks() {
       description:
         "Get a curated list of suitable universities and courses based on your profile and aspirations.",
       icon: <FileText className="w-6 h-6" />,
-      color: "from-amber-600 to-amber-700",
+      color: "text-amber-600",
     },
     {
       step: 3,
@@ -33,7 +33,7 @@ export function HowItWorks() {
       description:
         "Professional assistance with application forms, personal statements, and document preparation.",
       icon: <GraduationCap className="w-6 h-6" />,
-      color: "from-blue-800 to-blue-900",
+      color: "text-blue-800",
     },
     {
       step: 4,
@@ -41,7 +41,7 @@ export function HowItWorks() {
       description:
         "Comprehensive visa guidance including document verification and mock interview preparation.",
       icon: <MapPin className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500",
+      color: "text-orange-600",
     },
     {
       step: 5,
@@ -49,7 +49,7 @@ export function HowItWorks() {
       description:
         "Advanced mock interviews and final document checks to ensure visa success.",
       icon: <CheckCircle className="w-6 h-6" />,
-      color: "from-rose-500 to-pink-500",
+      color: "text-rose-600",
     },
     {
       step: 6,
@@ -57,7 +57,7 @@ export function HowItWorks() {
       description:
         "Complete assistance with accommodation, city guides, and settling into your new environment.",
       icon: <Plane className="w-6 h-6" />,
-      color: "from-blue-700 to-blue-800",
+      color: "text-blue-700",
     },
   ];
 
@@ -108,9 +108,7 @@ export function HowItWorks() {
 
               {/* Icon */}
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className={`bg-gradient-to-br ${step.color} bg-clip-text`}>
-                  {step.icon}
-                </div>
+                <div className={step.color}>{step.icon}</div>
               </div>
 
               {/* Content */}
