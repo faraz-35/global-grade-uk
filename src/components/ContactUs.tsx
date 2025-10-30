@@ -249,7 +249,7 @@ export function ContactUs() {
                     <input
                       {...register("name")}
                       type="text"
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500 ${
                         errors.name
                           ? "border-red-300 focus:ring-red-500"
                           : "border-gray-300"
@@ -271,7 +271,7 @@ export function ContactUs() {
                     <input
                       {...register("email")}
                       type="email"
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500 ${
                         errors.email
                           ? "border-red-300 focus:ring-red-500"
                           : "border-gray-300"
@@ -295,7 +295,7 @@ export function ContactUs() {
                     <input
                       {...register("phone")}
                       type="tel"
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500 ${
                         errors.phone
                           ? "border-red-300 focus:ring-red-500"
                           : "border-gray-300"
@@ -314,7 +314,7 @@ export function ContactUs() {
                       <Building className="w-4 h-4 inline mr-2" />
                       Program of Interest
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 text-gray-900">
                       <option value="">Select a program</option>
                       <option value="undergraduate">Undergraduate</option>
                       <option value="postgraduate">Postgraduate</option>
@@ -332,7 +332,7 @@ export function ContactUs() {
                   <textarea
                     {...register("message")}
                     rows={5}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 resize-none ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent transition-all duration-200 resize-none text-gray-900 placeholder-gray-500 ${
                       errors.message
                         ? "border-red-300 focus:ring-red-500"
                         : "border-gray-300"
