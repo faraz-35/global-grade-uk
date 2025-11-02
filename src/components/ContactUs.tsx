@@ -90,10 +90,10 @@ export function ContactUs() {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Support",
       description: "Detailed inquiries and applications",
-      value: "info@globalgrad.uk",
+      value: "team@globalgrade.uk",
       action: "Send Email",
       color: "from-amber-600 to-amber-700",
-      href: "mailto:info@globalgrad.uk",
+      href: "mailto:team@globalgrade.uk",
     },
   ];
 

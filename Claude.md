@@ -1,4 +1,4 @@
-# GlobalGrad Project Conventions
+# GlobalGrade Project Conventions
 
 ## Code Style & Architecture
 

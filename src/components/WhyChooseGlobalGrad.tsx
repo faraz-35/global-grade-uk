@@ -8,7 +8,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 
-export function WhyChooseGlobalGrad() {
+export function WhyChooseGlobalGrade() {
   const features = [
     {
       title: "Personalized Guidance",
@@ -80,17 +80,17 @@ export function WhyChooseGlobalGrad() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
             <Star className="w-4 h-4" />
-            Why Choose GlobalGrad
+            Why Choose GlobalGrade
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Why Choose
             <span className="block bg-gradient-to-r from-blue-800 to-amber-600 bg-clip-text text-transparent">
-              GlobalGrad UK?
+              GlobalGrade UK?
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the comprehensive benefits that make GlobalGrad the trusted
-            choice for Pakistani students seeking quality UK education
+            Discover the comprehensive benefits that make GlobalGrade the
+            trusted choice for Pakistani students seeking quality UK education
           </p>
         </div>
 

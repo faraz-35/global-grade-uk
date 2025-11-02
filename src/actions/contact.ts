@@ -55,7 +55,7 @@ const sendContactEmail = async (
     const { error: userEmailError } = await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject: "Thank you for contacting us - GlobalGrad",
+      subject: "Thank you for contacting us - GlobalGrade",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #1e40af; text-align: center;">Thank You for Contacting Us!</h2>
@@ -83,7 +83,7 @@ const sendContactEmail = async (
           <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
             <p style="color: #6b7280; font-size: 14px;">
               Best regards,<br>
-              The GlobalGrad Team
+              The GlobalGrade Team
             </p>
           </div>
         </div>

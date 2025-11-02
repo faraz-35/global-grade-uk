@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutUs } from "@/components/AboutUs";
-import { WhyChooseGlobalGrad } from "@/components/WhyChooseGlobalGrad";
+import { WhyChooseGlobalGrade } from "@/components/WhyChooseGlobalGrad";
 import { StudyDestinations } from "@/components/StudyDestinations";
 import { PopularUKPrograms } from "@/components/PopularUKPrograms";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -21,7 +21,7 @@ export default function Home() {
         <AboutUs />
       </section>
       <section id="why-choose">
-        <WhyChooseGlobalGrad />
+        <WhyChooseGlobalGrade />
       </section>
       <section id="destinations">
         <StudyDestinations />

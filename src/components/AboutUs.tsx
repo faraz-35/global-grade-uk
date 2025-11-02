@@ -23,7 +23,7 @@ export function AboutUs() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 text-sm font-medium mb-6">
             <Globe className="w-4 h-4" />
-            About GlobalGrad UK
+            About GlobalGrade UK
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Empowering Dreams,
@@ -32,7 +32,7 @@ export function AboutUs() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            GlobalGrad.uk is a UK-based international student recruitment
+            GlobalGrade.uk is a UK-based international student recruitment
             platform focused on helping talented students from Pakistan access
             world-class education opportunities in the United Kingdom.
           </p>

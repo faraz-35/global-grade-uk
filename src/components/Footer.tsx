@@ -21,7 +21,7 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">GlobalGrad</h3>
+              <h3 className="text-xl font-bold text-white">GlobalGrade</h3>
               <p className="text-blue-100 leading-relaxed">
                 Your trusted partner in international education. We help
                 students achieve their dreams of studying abroad with expert
@@ -173,7 +173,7 @@ export function Footer() {
               <Mail className="w-5 h-5 text-amber-400 flex-shrink-0" />
               <div>
                 <p className="text-sm font-medium text-white">Email</p>
-                <p className="text-sm text-blue-100">info@globalgrad.com</p>
+                <p className="text-sm text-blue-100">info@globalgrade.uk</p>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ export function Footer() {
         <div className="border-t border-blue-700 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-blue-100">
-              © {currentYear} GlobalGrad. All rights reserved.
+              © {currentYear} GlobalGrade. All rights reserved.
             </div>
           </div>
         </div>
