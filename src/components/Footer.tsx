@@ -6,6 +6,13 @@ import { Button } from "./ui/Button";
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,44 +34,44 @@ export function Footer() {
               <h4 className="text-lg font-semibold text-white">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a
-                    href="#home"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#home")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Home
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#about"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#about")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     About Us
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#destinations"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#destinations")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Study Destinations
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#programs"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#programs")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Programs
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#contact")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Contact Us
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -74,44 +81,44 @@ export function Footer() {
               <h4 className="text-lg font-semibold text-white">Services</h4>
               <ul className="space-y-2">
                 <li>
-                  <a
-                    href="#programs"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#programs")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     University Admissions
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#contact")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Visa Assistance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#programs"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#programs")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Scholarship Guidance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#why-choose"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#why-choose")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Career Counseling
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#how-it-works"
-                    className="text-blue-100 hover:text-white transition-colors"
+                  <button
+                    onClick={() => scrollToSection("#how-it-works")}
+                    className="text-blue-100 hover:text-white transition-colors text-left w-full"
                   >
                     Pre-departure Support
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -128,7 +135,12 @@ export function Footer() {
               <Button
                 variant="secondary"
                 className="w-full"
-                onClick={() => (window.location.href = "#contact")}
+                onClick={() => {
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Get Started Now
               </Button>

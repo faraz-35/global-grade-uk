@@ -346,12 +346,12 @@ export function ContactUs() {
                   )}
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col  gap-2">
                   <Button
                     variant="primary"
                     size="large"
                     disabled={isSubmitting}
-                    className="shadow-xl hover:shadow-blue-800/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="shadow-xl hover:shadow-blue-800/25 disabled:opacity-50 disabled:cursor-not-allowed mr-auto"
                   >
                     {isSubmitting ? (
                       <>
@@ -360,12 +360,12 @@ export function ContactUs() {
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5 mr-2" />
+                        <Send className="w-5 h-5 mr-2 inline" />
                         Send Message
                       </>
                     )}
                   </Button>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 ml-1">
                     We&apos;ll respond within 24 hours
                   </span>
                 </div>

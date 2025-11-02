@@ -161,7 +161,7 @@ export function HowItWorks() {
           <Button
             variant="primary"
             size="large"
-            className="shadow-2xl hover:shadow-indigo-500/25"
+            className="shadow-2xl hover:shadow-indigo-500/25 flex gap-1 ml-2"
             onClick={() => {
               const element = document.querySelector("#contact");
               if (element) {
@@ -170,7 +170,7 @@ export function HowItWorks() {
             }}
           >
             Start Your Application
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2 inline" />
           </Button>
         </div>
       </div>

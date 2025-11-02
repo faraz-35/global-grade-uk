@@ -267,16 +267,6 @@ export function StudyDestinations() {
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-6 py-3 mb-6">
-            <Camera className="w-4 h-4 text-blue-800" />
-            <span className="text-sm font-medium text-blue-800">
-              Find your perfect study destination
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

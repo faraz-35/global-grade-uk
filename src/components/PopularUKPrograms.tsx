@@ -176,16 +176,6 @@ export function PopularUKPrograms() {
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-6 py-3 mb-6">
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-blue-700">
-              Explore more opportunities
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ export function Button({
   loading = false,
 }: ButtonProps) {
   const baseClasses =
-    "font-medium rounded-xl transition-all duration-300 inline-flex items-center justify-center relative overflow-hidden group";
+    "font-medium rounded-xl transition-all duration-300 inline-flex items-center justify-center relative overflow-hidden group cursor-pointer";
 
   const variantClasses = {
     primary:

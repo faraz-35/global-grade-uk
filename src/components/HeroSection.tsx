@@ -70,7 +70,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="large"
-                className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                className=" "
                 onClick={() => {
                   const element = document.querySelector("#contact");
                   if (element) {
