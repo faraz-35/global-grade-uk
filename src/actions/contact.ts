@@ -4,7 +4,14 @@ import { actionClient, ActionResponse } from "@/lib/safe-action";
 import { contactFormSchema, ContactFormData } from "@/schemas/contact";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only when needed to avoid build-time errors
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY environment variable is not set");
+  }
+  return new Resend(apiKey);
+};
 
 // Send email notification
 const sendContactEmail = async (
@@ -18,6 +25,8 @@ const sendContactEmail = async (
     if (!fromEmail || !toEmail) {
       throw new Error("Email configuration is missing");
     }
+
+    const resend = getResendClient();
 
     // Send notification email to you
     const { error: adminEmailError } = await resend.emails.send({
