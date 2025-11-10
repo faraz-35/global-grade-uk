@@ -88,16 +88,17 @@ export function HeroSection() {
             <div className="relative">
               {/* Main Card */}
               <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-xl">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-white/50"></div>
-                  <div className="relative z-10 text-center text-gray-800">
-                    <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <GraduationCap className="w-12 h-12 text-blue-600" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900">
-                      Success Stories
-                    </h3>
-                    <p className="text-gray-600">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
+                  <Image
+                    src="/images/img3.jpg"
+                    alt="Success Stories - Students studying abroad"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Success Stories</h3>
+                    <p className="text-white/90">
                       Join thousands of successful students
                     </p>
                   </div>
@@ -105,8 +106,8 @@ export function HeroSection() {
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-100 rounded-2xl shadow-lg transform rotate-12 border border-blue-200"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-lg transform -rotate-12 border border-gray-300"></div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-gray-100/30 to-gray-200/30 rounded-2xl shadow-lg transform rotate-12 border border-gray-200/50"></div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-gray-100/40 to-gray-200/40 rounded-2xl shadow-lg transform -rotate-12 border border-gray-300/50"></div>
             </div>
           </div>
         </div>
